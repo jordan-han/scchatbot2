@@ -6,7 +6,7 @@ from streamlit_chat import message
 # Setting API key
 # openai.api_key = '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'
 # os.environ["OPENAI_API_KEY"] = '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'
-os.environ["OPENAI_API_KEY"] = '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'
+# os.environ["OPENAI_API_KEY"] = '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'
 
 PINECONE_API_KEY = '25f679ed-2e29-4df2-ae2a-d75256e8dfe7' # find at app.pinecone.io
 PINECONE_API_ENV = 'northamerica-northeast1-gcp' # next to api key in console
@@ -92,8 +92,9 @@ def generate_context(user_input):
         As a Singapore Customs officer, your goal is to provide highly accurate and helpful information to enquiries from traders. \
         You should strictly answer the queries based on only the context provided. \
         If you don't know the answer, just say that you don't know, don't try to make up an answer. \
-        You must only provide information that appear in the sources and not make up one yourself.
-        Be funny but professional in the way you answer.
+        You must only provide information that appear in the sources and not make up one yourself. \
+        Your reply should be in email format. Be professional and formal in the way you answer. \
+        Remember to always ask if there is anything further you can assist with after giving a reply.
        
         {context} \
 
